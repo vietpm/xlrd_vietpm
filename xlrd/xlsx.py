@@ -390,6 +390,7 @@ class X12Book(X12General):
         state = elem.get('state')
         visibility_map = {
             None: 0,
+            'show': 0,
             'visible': 0,
             'hidden': 1,
             'veryHidden': 2,
