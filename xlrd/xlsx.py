@@ -394,7 +394,7 @@ class X12Book(X12General):
             'hidden': 1,
             'veryHidden': 2,
         }
-        bk._sheet_visibility.append(visibility_map[state])
+        bk._sheet_visibility.append(visibility_map.get(state, 0))
         sheet = Sheet(bk, position=None, name=name, number=sheetx)
         sheet.utter_max_rows = X12_MAX_ROWS
         sheet.utter_max_cols = X12_MAX_COLS
